@@ -1,0 +1,25 @@
+
+@prefix      prov: <http://www.w3.org/ns/prov#> .
+@prefix       rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix      rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix      skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix     grasp: <http://www.github/cltl/grasp#> . CHECK
+@prefix       dwt: <http://www.github/cltl/grasp/examples/dewitt> . CHECK
+@prefix       sem: <http://sem#> . CHECK
+@prefix       nif: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+@prefix       dbp: <http://dbpedia.org/resource#> .
+@prefix        fn: <http://framenet> CHECK
+
+
+# events
+dwt:spread1 a sem:Event .
+
+dwt:convict a sem:Event
+            fn:convict@convicted    dbp:Cornelis_De_Witt    ;
+            fn:convict@crime        'treason'   ;
+            sem:hasParticipant      dbp:Prince_Of_Orange    .
+dwt:send a sem:Event .
+dwt:call a sem:Event .
+dwt:kill a sem:Event .
+dwt:reward a sem:Event .
+
