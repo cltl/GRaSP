@@ -3,12 +3,12 @@
 @prefix       rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix      rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix      skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix     grasp: <http://www.github/cltl/grasp#> . CHECK
-@prefix       dwt: <http://www.github/cltl/grasp/examples/dewitt> . CHECK
-@prefix       sem: <http://sem#> . CHECK
+@prefix     grasp: <http://www.github/cltl/grasp/tree/master/ontology#> . 
+@prefix       dwt: <http://www.github/cltl/grasp/tree/master/examples/history/> . 
+@prefix       sem: <http://http://semanticweb.cs.vu.nl/2009/11/sem/> . 
 @prefix       nif: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
 @prefix       dbp: <http://dbpedia.org/resource#> .
-@prefix        fn: <http://framenet> CHECK
+@prefix        fn: <http://www.newsreader-project.eu/ontologies/framenet/> 
 
 
 # events
