@@ -16,25 +16,67 @@
 
 # events
 :instances{
+
+#pamphlets are spread
 dwt:spread1 a sem:Event ;
             fn:Dispersal@Individuals 'pamphlets'.
 
+#forbidding of the pamphlets by the prince of Orange
 dwt:forbid  a sem:Event ;
             fn:Deny_permission@Action dwt:spread1 ;
             fn:Deny_permission@Authority dbp:William_III_of_England .
 
+#request from Johan to forbid this
+dwt:request1    a sem:Event ;
+                fn:Request@Addressee dbp:William_III_of_England ;
+                fn:Request@Speaker dbp:Johan_De_Witt ;
+                fn:Request@Message dwt:forbid .
 
-dwt:request a sem:Event ;
-            fn:Request@Addressee dbp:William_III_of_England ;
-            fn:Request@Speaker dbp:Johan_De_Witt ;
-            fn:Request@Message dwt:forbid .
+#the prince of Orange refuses
+dwt:refusal a sem:Event ;
+            fn:Agree_or_Refuse_to_Act@Speaker dbp:William_III_of_England ;
+            fn:Agree_or_Refuse_to_Act@Interlocutor dbp:Johan_De_Witt ;
+            fn:Agree_or_Refuse_to_Act@Proposed_action dwt:forbid .
 
+#conviction of Cornelis
 dwt:convict a sem:Event
             fn:convict@convicted    dbp:Cornelis_De_Witt    ;
             fn:convict@crime        'treason'   ;
             sem:hasParticipant      dbp:Prince_Of_Orange    .
-dwt:send a sem:Event .
-dwt:call a sem:Event .
-dwt:kill a sem:Event .
-dwt:reward a sem:Event .
+
+#Cornelis sent to prison (the `Gevangenpoort')
+dwt:send    a sem:Event ;
+            fn:Placing@theme dbp:Cornelis_De_Witt
+            fn:Placing@Goal dbp:Gevangenpoort .
+
+#Maid sent to tell Johan Cornelis wants to see him
+dwt:call    a sem:Event ;
+            fn:Contacting@Communicator 'maid' ;
+            fn:Contacting@Addressee 'dbp:Johan_De_Witt' ;
+            fn:Contacting@Communication dwt:request2    .
+
+#Cornelis calls for Johan
+dwt:request2    a sem:Event ;
+                fn:Request@Addressee    dbp:Johan_De_Witt ;
+                fn:Request@Speaker dbp:Cornelis_De_Witt ;
+                fn:Request@Message dwt:come .
+
+#Johan is coming to the 'Gevangenpoort'
+dwt:come    a sem:Event ;
+            fn:Motion@theme dbp:Johan_De_Witt ;
+            fn:Motion@Goal dbp:Gevangenpoort .
+
+#Johan and Cornelis are killed (killers known members of the mob, the prince of Orange)
+dwt:kill a sem:Event    ;
+fn:Killing@Victim dbp:Johan_De_Witt , dbp:Cornelis_De_Witt ;
+fn:Killing@Killer dbp:Cornelis_Tromp , dbp:Hendrik_Verhoeff , dbp:Willem_Adriaan_van_Nassau , dbp:Johan_van_Banchem , dbp:Willem_Tichelaar , Johan_Kievit ;
+fn:Killing@Location dbp:Gevangenpoort ;
+fn:Killing@Killer dbp:William_III_of_England .
+
+#The prince of Orange rewarded the killers
+dwt:reward  a sem:Event  ;
+            fn:Rewards_and_Punishments@Agent dbp:Willem_III_of_England ;
+            fn:Rewards_and_Punishments@Evaluee dbp:Cornelis_Tromp , dbp:Hendrik_Verhoeff , dbp:Willem_Adriaan_van_Nassau , dbp:Johan_van_Banchem , dbp:Willem_Tichelaar , Johan_Kievit ;
+            fn:Rewards_and_Punishments@Reason dwt:Kill .
+
 }
