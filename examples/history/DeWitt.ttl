@@ -11,8 +11,23 @@
 @prefix        fn: <http://www.newsreader-project.eu/ontologies/framenet/> 
 
 
+
+
+
 # events
-dwt:spread1 a sem:Event .
+:instances{
+dwt:spread1 a sem:Event ;
+            fn:Dispersal@Individuals 'pamphlets'.
+
+dwt:forbid  a sem:Event ;
+            fn:Deny_permission@Action dwt:spread1 ;
+            fn:Deny_permission@Authority dbp:William_III_of_England .
+
+
+dwt:request a sem:Event ;
+            fn:Request@Addressee dbp:William_III_of_England ;
+            fn:Request@Speaker dbp:Johan_De_Witt ;
+            fn:Request@Message dwt:forbid .
 
 dwt:convict a sem:Event
             fn:convict@convicted    dbp:Cornelis_De_Witt    ;
@@ -22,4 +37,4 @@ dwt:send a sem:Event .
 dwt:call a sem:Event .
 dwt:kill a sem:Event .
 dwt:reward a sem:Event .
-
+}
