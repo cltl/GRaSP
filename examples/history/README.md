@@ -11,6 +11,6 @@ Simplified versions of the following statements were used for the use case. Illu
 
 %4) Roorda: 'Deze legende, want dat was het toch, zou nog lang voortleven, zelfs nog na de verschijning van Fruins geschrift over dit onderwerp.'
 
-%5) Purd'Homme van Reine: 'De preciese rol van Willem III zal wel altijd in nevelen gehuld blijven. Omdat we weten dat hij erover is ingelicht, kan hij niet van zijn aandeel worden vrijgepleit. Het maakt niet uit of hij al dan niet met beoaalde delen van het plan heeft ingestemd. Hij was op de hoogte en heeft niet ingegrepen om de moord te voorkomen.'
+%5) Prud'Homme van Reine: 'De preciese rol van Willem III zal wel altijd in nevelen gehuld blijven. Omdat we weten dat hij erover is ingelicht, kan hij niet van zijn aandeel worden vrijgepleit. Het maakt niet uit of hij al dan niet met beoaalde delen van het plan heeft ingestemd. Hij was op de hoogte en heeft niet ingegrepen om de moord te voorkomen.'
 
 %6) Ter Braake: 'De bijeenkomst vond plaats kort voor de marteling en veroordeling van Cornelis de Witt. Het lijkt er daarom op dat Willem juist zijn stempel heeft willen drukken op het vonnis dat de raadsheren zouden vellen, door een paar dagen daarvoor overleg te plegen met een aantal van hen. Een dubieuze rol van Willem III bij de veroordeling van Cornelis de Witt is daarmee aannemelijker dan een rol bij de daadwerkelijke moord.'
