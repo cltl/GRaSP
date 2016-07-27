@@ -11,9 +11,6 @@
 @prefix        fn: <http://www.newsreader-project.eu/ontologies/framenet/> 
 
 
-
-
-
 # events
 :instances{
 
@@ -67,11 +64,16 @@ dwt:come    a sem:Event ;
             fn:Motion@Goal dbp:Gevangenpoort .
 
 #Johan and Cornelis are killed (killers known members of the mob, the prince of Orange)
-dwt:kill a sem:Event    ;
-fn:Killing@Victim dbp:Johan_De_Witt , dbp:Cornelis_De_Witt ;
-fn:Killing@Killer dbp:Cornelis_Tromp , dbp:Hendrik_Verhoeff , dbp:Willem_Adriaan_van_Nassau , dbp:Johan_van_Banchem , dbp:Willem_Tichelaar , Johan_Kievit ;
-fn:Killing@Location dbp:Gevangenpoort ;
-fn:Killing@Killer dbp:William_III_of_England .
+dwt:kill    a sem:Event    ;
+            fn:Killing@Victim dbp:Johan_De_Witt , dbp:Cornelis_De_Witt ;
+            fn:Killing@Killer dbp:Cornelis_Tromp , dbp:Hendrik_Verhoeff , dbp:Willem_Adriaan_van_Nassau , dbp:Johan_van_Banchem , dbp:Willem_Tichelaar , Johan_Kievit ;
+            fn:Killing@Location dbp:Gevangenpoort ;
+            fn:Killing@Killer dbp:William_III_of_England .
+
+#Responsibility for the killing
+dwt:responsible         a           sem:Event   ;
+                        pb:Arg1     dwt:kill .
+
 
 #The prince of Orange rewarded the killers
 dwt:reward  a sem:Event  ;
@@ -80,3 +82,28 @@ dwt:reward  a sem:Event  ;
             fn:Rewards_and_Punishments@Reason dwt:Kill .
 
 }
+
+
+
+#Example DeWittResponsible.png
+
+#responsibility of prince
+dwt:respPrince {
+dwt:responsible        pb:Arg0     dbp:William_III_of_England          .     
+}
+
+#responsibility of Magistrate
+dwt:respAuth {
+dwt:responsible        pb:Arg0     dwt:The_Hague_Magistrate .
+}
+
+dwt:attrResp {
+
+dwt:responsible         gaf:denotedBy           dwt:complete_acquittal  .
+dwt:respAuth            gaf:denotedBy           dwt:which_allowed_it_to_happen      .
+dwt:respPrince          gaf:denotedBy           dwt:can_not_be_completely_exonerated            .      
+
+}
+
+
+
