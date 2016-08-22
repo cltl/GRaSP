@@ -8,8 +8,8 @@
 @prefix       sem: <http://http://semanticweb.cs.vu.nl/2009/11/sem/> . 
 @prefix       nif: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
 @prefix       dbp: <http://dbpedia.org/resource#> .
-@prefix        fn: <http://www.newsreader-project.eu/ontologies/framenet/> 
-
+@prefix        fn: <http://www.newsreader-project.eu/ontologies/framenet/>
+@prefix        bn: <http://data.biographynet.nl/rdf/>
 
 
 
@@ -42,7 +42,7 @@ dwt:refusal a sem:Event ;
 dwt:convict a sem:Event
             fn:convict@convicted    dbp:Cornelis_De_Witt    ;
             fn:convict@crime        'treason'   ;
-            sem:hasParticipant      dbp:Prince_Of_Orange    .
+            sem:hasParticipant      dbp:William_III_of_England    .
 
 #Cornelis sent to prison (the `Gevangenpoort')
 dwt:send    a sem:Event ;
@@ -55,7 +55,6 @@ dwt:call    a sem:Event ;
             fn:Contacting@Addressee 'dbp:Johan_De_Witt' ;
             fn:Contacting@Communication dwt:request2    .
 
-#Cornelis calls for Johan
 dwt:request2    a sem:Event ;
                 fn:Request@Addressee    dbp:Johan_De_Witt ;
                 fn:Request@Speaker dbp:Cornelis_De_Witt ;
@@ -67,16 +66,81 @@ dwt:come    a sem:Event ;
             fn:Motion@Goal dbp:Gevangenpoort .
 
 #Johan and Cornelis are killed (killers known members of the mob, the prince of Orange)
-dwt:kill a sem:Event    ;
-fn:Killing@Victim dbp:Johan_De_Witt , dbp:Cornelis_De_Witt ;
-fn:Killing@Killer dbp:Cornelis_Tromp , dbp:Hendrik_Verhoeff , dbp:Willem_Adriaan_van_Nassau , dbp:Johan_van_Banchem , dbp:Willem_Tichelaar , Johan_Kievit ;
-fn:Killing@Location dbp:Gevangenpoort ;
-fn:Killing@Killer dbp:William_III_of_England .
+dwt:kill    a sem:Event    ;
+            fn:Killing@Victim dbp:Johan_De_Witt , dbp:Cornelis_De_Witt ;
+            fn:Killing@Killer dbp:Cornelis_Tromp , dbp:Hendrik_Verhoeff , dbp:Willem_Adriaan_van_Nassau ,                                   dbp:Johan_van_Banchem , dbp:Willem_Tichelaar , Johan_Kievit ;
+            fn:Killing@Location dbp:Gevangenpoort ;
+            fn:Killing@Killer dbp:William_III_of_England .
 
 #The prince of Orange rewarded the killers
 dwt:reward  a sem:Event  ;
             fn:Rewards_and_Punishments@Agent dbp:Willem_III_of_England ;
             fn:Rewards_and_Punishments@Evaluee dbp:Cornelis_Tromp , dbp:Hendrik_Verhoeff , dbp:Willem_Adriaan_van_Nassau , dbp:Johan_van_Banchem , dbp:Willem_Tichelaar , Johan_Kievit ;
             fn:Rewards_and_Punishments@Reason dwt:Kill .
+
+#Prevent the killing
+dwt:prevent a   sem:Event   ;
+            fn:Preventing@Event dwt:kill    .
+
+#Fail to prevent (note: 'failing' in this sense needs to be defined as part of GRaSP)
+dwt:fail_prevent    a   sem:Event   ;
+                    grasp:fail@agent dbp:William_III_of_England  ;
+                    grasp:fail@event    dwt:prevent .
+
+#Responsibility for killing
+dwt:responsible a   sem:Event   ;
+                fn:Responsibility@Act   dwt:kill    ;
+                fn:Responsibility@Agent   bn:Haags_Magistraat .
+                gaf:denotedBy   dwt:mention1
+
+dwt:fail_prev_HM    gaf:denotedBy   dwt:mention3    .
+
+dwt:resp_PoO    gaf:denotedBy dwt:mention4  .
+
+}
+
+#instance of linking The Hague authorities to failing to prevent
+:fail_prev_HM {
+dwt:fail_prevent    graps@fail@agent    bn:Haags_Magistraat .
+}
+
+#instance of linking Prince of Orange to responsibility
+:resp_PoO {
+dwt:responsible fn:Responsibility@Agent   dbp:William_III_of_England  .
+}
+
+
+# mentions
+:mentions{
+#mention 'complete acquittal' (of Fruijn)
+dwt:mention1    nif:isString            "volkomen vrijspraak"   ;
+                grasp:wasGeneratedBy    dwt:mention2    ;
+                grasp:hasAttribution    dwt:attribution1    .
+
+#mention 'came to' (introducing Fruijn's conclusion)
+dwt:mention2    nif:isString    "kwam tot"  .
+
+#mention 'which allowed it to happen'
+dwt:mention3    nif:isString    "die het toeliet"   ;
+                grasp:hasAttribution    dwt:attribution2    .
+
+#mention 'cannot be completely exonerated'
+dwt:mention4    nif:isString    "kan hij niet [..] worden vrijgepleit"  ;
+                grasp:hasAttribution    dwt:attribution3    .
+}
+
+#attribution
+:attribution{
+#attribution of responsible from Fruijn ('complete acquittal') (negative polarity of responsibility)
+dwt:attribution1    grasp:wasAttributedTo   dbp:Robert_Fruijn   ;
+                    rdf:value               fact:NEG    .
+
+#attribution of responsible from VDAA ('they allowed it to happen') (positive polarity)
+dwt:attribution2    prov:wasAttributedTo    http://resources.huygens.knaw.nl/retroboeken/vdaa   ;
+                    rdf:value               fact:POS    .
+
+#attribution of responsible from Prud'Homme ('cannot be completely exhonerated') (positive polarity)
+dwt:attribution3    prov:wasAttributedTo    dbp:Ronald_Prud%27homme_van_Reine   ;
+                    rdf:value               fact:POS    .
 
 }
