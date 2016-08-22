@@ -12,8 +12,6 @@
 @prefix        bn: <http://data.biographynet.nl/rdf/>
 
 
-
-
 # events
 :instances{
 
@@ -55,6 +53,7 @@ dwt:call    a sem:Event ;
             fn:Contacting@Addressee 'dbp:Johan_De_Witt' ;
             fn:Contacting@Communication dwt:request2    .
 
+#Cornelis calls for Johan
 dwt:request2    a sem:Event ;
                 fn:Request@Addressee    dbp:Johan_De_Witt ;
                 fn:Request@Speaker dbp:Cornelis_De_Witt ;
@@ -68,7 +67,7 @@ dwt:come    a sem:Event ;
 #Johan and Cornelis are killed (killers known members of the mob, the prince of Orange)
 dwt:kill    a sem:Event    ;
             fn:Killing@Victim dbp:Johan_De_Witt , dbp:Cornelis_De_Witt ;
-            fn:Killing@Killer dbp:Cornelis_Tromp , dbp:Hendrik_Verhoeff , dbp:Willem_Adriaan_van_Nassau ,                                   dbp:Johan_van_Banchem , dbp:Willem_Tichelaar , Johan_Kievit ;
+            fn:Killing@Killer dbp:Cornelis_Tromp , dbp:Hendrik_Verhoeff , dbp:Willem_Adriaan_van_Nassau , dbp:Johan_van_Banchem , dbp:Willem_Tichelaar , Johan_Kievit ;
             fn:Killing@Location dbp:Gevangenpoort ;
             fn:Killing@Killer dbp:William_III_of_England .
 
