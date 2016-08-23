@@ -22,9 +22,15 @@ Translation: 'On this basis, Fruin concluded that the departure of the cavalry w
 
 %2) Van der Aa: DAA, deel 20: 'In weerwil der smeekingen van zijne dochter en vrienden begaf hij zich naar de gevangenpoort, waar heen men hem gelokt had, en welhaast volgde een tooneel, dat zoowel de Haagsche bevolking die het aanrichtte, als de Haagsche regering die het toeliet, tot onuitwischbare schande strekt.'
 
+Translation (Van der Aa; DAA, part 20: 'In spite of the entreaties of his daughter and friends, he went to the gatehouse, where he had been lured to, and almost immediately a scene followed that is a indelible disgrace both to the Hague population who wreaked it as well as to the Hague government that allowed it.'
+
 %3) Romeinen: 'In de dagen, dat er in Holland geen musje van de daken kon vallen zonder de wil van de jonge stadhouder, kreeg Tichelaer een jaargeld, werd Van Bankhem baljuw van Den Haag en Verhoef door Tromp aanbevolen voor het werven van vrijwilligers.'
 
+Translation: 'In times where it was not even possible for a sparrow to fall of the roof in Holland without the approval of the young governor, Tichelaer received an annuity, Van Bankhem became bailiff of The Hague and Verhoef was recommended by Tromp for recruiting volunteers.' 
+
 %4) Roorda: 'Deze legende, want dat was het toch, zou nog lang voortleven, zelfs nog na de verschijning van Fruins geschrift over dit onderwerp.'
+
+Translation: 'This legend, because that is what it was, would persist for a long time even after Fruin's writings on this topic had appeared.'
 
 %5) Prud'Homme van Reine: 'De preciese rol van Willem III zal wel altijd in nevelen gehuld blijven. Omdat we weten dat hij erover is ingelicht, kan hij niet van zijn aandeel worden vrijgepleit. Het maakt niet uit of hij al dan niet met beoaalde delen van het plan heeft ingestemd. Hij was op de hoogte en heeft niet ingegrepen om de moord te voorkomen.'
 
