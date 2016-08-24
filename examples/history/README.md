@@ -13,6 +13,10 @@ The example illustrates:
 Note that we can also consider (and represent) the responsibility of the authorities in general as one event and that of the prince as another. This avoids the use of named graphs. Each approach has its advantages. The alternative will appear in future examples.
 
 
+* Picture 2 (found under examples/pictures/PerspectivesExampleWilliamShouldPrevent)
+
+This provides a simplified illustration about the different interpretations of what makes the Prince of Orange responsible or not. Both sources agree that he did not prevent the murder, but one concludes that 'he knew and can therefore not be exhonorated from his share' and the other claims that the outcome 'could not have possibly been foreseen' leading to a judgement of complete acquital. The image illustrates the supposition that failing to prevent makes responsible.
+
 
 The text (original in Dutch, followed by basic translations)
 
@@ -32,7 +36,7 @@ Translation: 'In times where it was not even possible for a sparrow to fall of t
 
 Translation: 'This legend, because that is what it was in the end, would persist for a long time even after Fruin's writings on this topic had appeared.'
 
-%5) Prud'Homme van Reine: 'De preciese rol van Willem III zal wel altijd in nevelen gehuld blijven. Omdat we weten dat hij erover is ingelicht, kan hij niet van zijn aandeel worden vrijgepleit. Het maakt niet uit of hij al dan niet met beoaalde delen van het plan heeft ingestemd. Hij was op de hoogte en heeft niet ingegrepen om de moord te voorkomen.'
+%5) Prud'Homme van Reine: 'De preciese rol van Willem III zal wel altijd in nevelen gehuld blijven. Omdat we weten dat hij erover is ingelicht, kan hij niet van zijn aandeel worden vrijgepleit. Het maakt niet uit of hij al dan niet met bepaalde delen van het plan heeft ingestemd. Hij was op de hoogte en heeft niet ingegrepen om de moord te voorkomen.'
 
 Translation: 'The precise role of William III will always remain shrouded in mystery. Because we know that he had been informed about it, he can not be exonerated from his share. It does not matter whether or not he agreed with certain parts of the plan. He was aware of it and did not intervene to prevent the murder.'
 
